@@ -1,0 +1,37 @@
+"create" {
+	async
+
+	"javascript" {
+		var text = input;
+		var that = this;
+		pluri.evaluateBranch(text, function(value){
+			that.done(value)
+		});
+	}
+}
+
+"async" {
+
+    "javascript" {
+        console.log('First Task');
+
+        var that = this;
+        setTimeout(function(){
+            that.done('');
+        }, 3000)
+    }
+
+    "javascript" {
+        console.log('Second task, it is concurrent');
+
+        var that = this;
+        setTimeout(function(){
+            that.done('');
+        }, 1000)
+    }
+}
+
+"javascript" {
+    console.log('Third task, waits for async completion');
+    this.done('');
+}

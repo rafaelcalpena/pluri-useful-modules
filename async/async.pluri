@@ -1,0 +1,11 @@
+"create" {
+	async
+
+	"javascript" {
+		var text = input;
+		var that = this;
+		pluri.evaluateBranch(text, function(value){
+			that.done(value)
+		});
+	}
+}
