@@ -7,7 +7,7 @@ This module is responsible for executing a sequence of asynchronous/concurrent c
 **Example:** The code below creates two concurrent tasks, but the third task will wait for the completion of the previous two
 
     "async" {
-    	
+
         "javascript" {
 			console.log('First Task');
 
@@ -33,4 +33,4 @@ This module is responsible for executing a sequence of asynchronous/concurrent c
     }
 
 
-
+To run this example, change directory to `/example` and run: `pluri async-example.pluri`
